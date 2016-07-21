@@ -155,7 +155,11 @@ def main():
 
     # This print is actually what sets the PATH or PROMPT variable.  The shell
     # script gets this value, and finishes the job.
-    print(path)
+    
+    # When this command is run in a Windows cygwin like terminal, the output returned includes
+    # DOS/Windows line-ending characters '^M' in returned output. Can be avoided  
+    # by printing with no line ending. 
+    sys.stdout.write(path)
 
 
 if __name__ == '__main__':

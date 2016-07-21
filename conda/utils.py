@@ -399,6 +399,14 @@ if on_win:
         "sh.exe": dict(
             msys2_shell_base, exe="sh.exe",
         ),
+        # Copy of Cygwin entry but with zsh.exe
+        "zsh.exe": dict(
+            unix_shell_base,
+            exe="zsh.exe",
+            binpath="/Scripts/",  # mind the trailing slash.
+            path_from=cygwin_path_to_win,
+            path_to=win_path_to_cygwin
+        ),
     }
 
 else:
