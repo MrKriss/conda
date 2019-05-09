@@ -277,7 +277,7 @@ function Add-CondaEnvironmentToPrompt() {
         if ($Env:CONDA_PROMPT_MODIFIER) {
             $Env:CONDA_PROMPT_MODIFIER | Write-Host -NoNewline
         }
-        CondaPromptBackup;
+        script:CondaPromptBackup;
     }
 }
 
